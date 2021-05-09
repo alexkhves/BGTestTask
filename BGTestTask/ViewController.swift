@@ -32,6 +32,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let url = URL(string: imageURL)
 
         cell.imageView.downloadImage(url: url!)
+        cell.imageLabel.text = devInfo[indexPath.row].value.userName
         
         return cell
     }
@@ -63,7 +64,11 @@ extension ViewController {
         print(error)
                 }
                }
-           }.resume()
+            self.devInfo.sort {
+                $0.value.userName < $1.value.userName
+            }
+           }
+           .resume()
         }
     }
     
