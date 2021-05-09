@@ -6,19 +6,23 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITextViewDelegate {
+    
     
     var devInfo: [(key: String, value: ViewController.Users)] = []
-    var sortedDevInfo: ()
+    var webViewController = UIStoryboard(name: "WebView", bundle: nil).instantiateInitialViewController() as! WebViewController
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         fetchData()
     }
     
@@ -30,7 +34,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! CustomCell
         let imageURL = "http://dev.bgsoft.biz/task/" + devInfo[indexPath.row].key + ".jpg"
         let url = URL(string: imageURL)
-
+        let userURL = devInfo[indexPath.row].value.userUrl
+        let photoURL = devInfo[indexPath.row].value.photoUrl
+        
+        cell.userURLView.delegate = self
+        cell.photoURLView.delegate = self
+        cell.userURLView.hyperLink(title: "User URL", urlString: userURL)
+        cell.photoURLView.hyperLink(title: "Photo URL", urlString: photoURL)
+        cell.imageView.image = nil
         cell.imageView.downloadImage(url: url!)
         cell.imageLabel.text = devInfo[indexPath.row].value.userName
         
@@ -44,6 +55,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height);
     }
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        let webViewController = UIStoryboard(name: "WebView", bundle: nil).instantiateInitialViewController() as! WebViewController
+
+        webViewController.url = URL
+        self.present(webViewController, animated: true)
+            return false
+        }
 
 }
 

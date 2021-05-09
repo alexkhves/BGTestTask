@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BGTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="BGTestTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,21 +34,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="259"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1L2-bd-8Ty" customClass="CustomImageView" customModule="BGTestTask" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="259"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NR7-10-JvL">
-                                                    <rect key="frame" x="10" y="10" width="161" height="20"/>
+                                                    <rect key="frame" x="10" y="214" width="161" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1L2-bd-8Ty" customClass="CustomImageView" customModule="BGTestTask" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="40" width="181" height="219"/>
-                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="User URL" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOq-bd-Zcl" customClass="CustomTextView" customModule="BGTestTask" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="10" width="55.5" height="28"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Photo URL" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-YH-sP8" customClass="CustomTextView" customModule="BGTestTask" customModuleProvider="target">
+                                                    <rect key="frame" x="109.5" y="10" width="61.5" height="28"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="NR7-10-JvL" firstAttribute="top" secondItem="vfw-Eh-Ev0" secondAttribute="top" constant="10" id="0Cv-9Y-ArI"/>
+                                                <constraint firstItem="4kV-YH-sP8" firstAttribute="top" secondItem="vfw-Eh-Ev0" secondAttribute="top" constant="10" id="0ix-b6-Vw3"/>
                                                 <constraint firstAttribute="trailing" secondItem="NR7-10-JvL" secondAttribute="trailing" constant="10" id="6Z4-43-QwS"/>
+                                                <constraint firstAttribute="trailing" secondItem="4kV-YH-sP8" secondAttribute="trailing" constant="10" id="6Za-wl-whn"/>
                                                 <constraint firstAttribute="trailing" secondItem="1L2-bd-8Ty" secondAttribute="trailing" id="7aY-Jp-rbz"/>
-                                                <constraint firstItem="1L2-bd-8Ty" firstAttribute="top" secondItem="NR7-10-JvL" secondAttribute="bottom" constant="10" id="Acr-oS-SA4"/>
+                                                <constraint firstItem="1L2-bd-8Ty" firstAttribute="top" secondItem="vfw-Eh-Ev0" secondAttribute="top" id="ICu-d7-d8h"/>
+                                                <constraint firstItem="dOq-bd-Zcl" firstAttribute="top" secondItem="vfw-Eh-Ev0" secondAttribute="top" constant="10" id="Jvl-KF-Nvc"/>
                                                 <constraint firstItem="1L2-bd-8Ty" firstAttribute="leading" secondItem="vfw-Eh-Ev0" secondAttribute="leading" id="Z56-Rx-1pb"/>
+                                                <constraint firstItem="dOq-bd-Zcl" firstAttribute="leading" secondItem="vfw-Eh-Ev0" secondAttribute="leading" constant="10" id="bXn-7k-ekE"/>
+                                                <constraint firstAttribute="bottom" secondItem="NR7-10-JvL" secondAttribute="bottom" constant="25" id="pIO-T9-1aR"/>
                                                 <constraint firstAttribute="bottom" secondItem="1L2-bd-8Ty" secondAttribute="bottom" id="rCH-vD-QK1"/>
                                                 <constraint firstItem="NR7-10-JvL" firstAttribute="leading" secondItem="vfw-Eh-Ev0" secondAttribute="leading" constant="10" id="xqC-CW-aTh"/>
                                             </constraints>
@@ -57,6 +76,8 @@
                                         <connections>
                                             <outlet property="imageLabel" destination="NR7-10-JvL" id="Diz-R2-SgO"/>
                                             <outlet property="imageView" destination="1L2-bd-8Ty" id="7ma-5B-iQM"/>
+                                            <outlet property="photoURLView" destination="4kV-YH-sP8" id="On0-gK-jfL"/>
+                                            <outlet property="userURLView" destination="dOq-bd-Zcl" id="d4N-s3-e5a"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +108,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
