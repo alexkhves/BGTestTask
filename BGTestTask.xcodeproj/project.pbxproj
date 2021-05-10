@@ -18,6 +18,7 @@
 		4D4400C32648280C0005E7D4 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4400C22648280C0005E7D4 /* WebView.storyboard */; };
 		4D4400C62648283B0005E7D4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4400C52648283B0005E7D4 /* WebViewController.swift */; };
 		4D5B4D0A26489AF600903CE2 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4D0926489AF600903CE2 /* CustomTextView.swift */; };
+		4D5B4D0D264966D800903CE2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5B4D0C264966D800903CE2 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D4400C22648280C0005E7D4 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		4D4400C52648283B0005E7D4 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4D5B4D0926489AF600903CE2 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		4D5B4D0C264966D800903CE2 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4D4400C8264828FB0005E7D4 /* WebView */,
 				4D3D0C8A2647C36600C686DC /* ViewController.swift */,
 				4D3D0C9E2647CE4300C686DC /* CustomImageView.swift */,
+				4D5B4D0C264966D800903CE2 /* CustomView.swift */,
 				4D3D0C9B2647CB9300C686DC /* CustomCell.swift */,
 				4D5B4D0926489AF600903CE2 /* CustomTextView.swift */,
 				4D3D0C8C2647C36600C686DC /* Main.storyboard */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3D0C8B2647C36600C686DC /* ViewController.swift in Sources */,
+				4D5B4D0D264966D800903CE2 /* CustomView.swift in Sources */,
 				4D4400C62648283B0005E7D4 /* WebViewController.swift in Sources */,
 				4D3D0C872647C36600C686DC /* AppDelegate.swift in Sources */,
 				4D3D0C9C2647CB9300C686DC /* CustomCell.swift in Sources */,

@@ -42,6 +42,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.userURLView.hyperLink(title: "User URL", urlString: userURL)
         cell.photoURLView.hyperLink(title: "Photo URL", urlString: photoURL)
         cell.imageView.image = nil
+        cell.shadowView.addShadow()
         cell.imageView.downloadImage(url: url!)
         cell.imageLabel.text = devInfo[indexPath.row].value.userName
         
